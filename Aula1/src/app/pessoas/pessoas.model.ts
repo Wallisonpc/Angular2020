@@ -1,8 +1,9 @@
+
 export interface pessoas{
     
-    id: integer;
+    id: number;
     name: string;
-    idade: integer;
+    idade: number;
     corOlhos: string;
     sexo: string;
     email: string

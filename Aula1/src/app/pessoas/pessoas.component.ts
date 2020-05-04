@@ -10,12 +10,14 @@ import { ɵangular_packages_core_testing_testing_a } from '@angular/core/testing
   styleUrls: ['./pessoas.component.css']
 })
 export class PessoasComponent implements OnInit {
-  pessoasArray: Pessoa  [] = [];
+  pessoasArray: pessoas  [] = [];
   pessoa: PessoasComponent;
   detallhesPessoa: boolean = false;
 
 
-  constructor() {private pessoasService: PessoasService }
+  constructor(private pessoasService: PessoasService) {
+
+  }
 
   ngOnInit(): void {
     this.pessoasArray = this.pessoasService.getPessoas();
@@ -23,7 +25,7 @@ export class PessoasComponent implements OnInit {
   }
 
   detalheDaPessoa(id){
-    this,pessoasArray.forEach(_pessoa =>{
+    this.pessoasArray.forEach(_pessoa =>{
       if (_pessoa.id == id){
         this.pessoa = _pessoa;
       }
@@ -31,8 +33,8 @@ export class PessoasComponent implements OnInit {
   }
   alterarPessoa(_pessoa){
     this.pessoasArray.forEach(pessoa =>{
-      if(pessoa.id == ɵangular_packages_core_testing_testing_a.id)
-      pessoa.name = +pessoa.name
+      if(pessoa.id == pessoa.id)
+      pessoa.name = _pessoa.name
     })
   }
 

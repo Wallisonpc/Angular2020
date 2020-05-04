@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { pessoas } from '../pessoas.model';
-import {PessoasService } from '../pessoas.service';
+import { pessoas } from '../pessoas/pessoas.model';
+import {PessoasService } from '../pessoas/pessoas.service';
+
 import { ɵangular_packages_core_testing_testing_a } from '@angular/core/testing';
 
 @Component({
@@ -22,13 +23,13 @@ export class PessoasComponent implements OnInit {
   }
 
   detalheDaPessoa(id){
-    this,pessoasArry.forEach(_pessoa =>{
+    this,pessoasArray.forEach(_pessoa =>{
       if (_pessoa.id == id){
         this.pessoa = _pessoa;
       }
     })
   }
-  alterarPEssoa(_pessoa){
+  alterarPessoa(_pessoa){
     this.pessoasArray.forEach(pessoa =>{
       if(pessoa.id == ɵangular_packages_core_testing_testing_a.id)
       pessoa.name = +pessoa.name
